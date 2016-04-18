@@ -3,19 +3,22 @@
 
 class Sentence 
 {
-	// public function __construct($sentence) {
-	// 	$this->sentence = $sentence;
-	// 	return true;
-	// }
+	private $config;
+	
+
+
+	public function __construct() {
+		include("environment.php");
+		$this->config = $config;
+	}
 
 	public function send_request() {
-		// $this->sentence = $sentence;
 
-		// Unirest\Request::verifyPeer(false);
-        
+      	Unirest\Request::verifyPeer(false);
+      	
         $response = Unirest\Request::get("https://yoda.p.mashape.com/yoda?sentence=You+will+learn+how+to+speak+like+me+someday.",
             array(
-                "X-Mashape-Key" => "os0f5yxvndmshuOUIsim848yB3cVp1rVQGbjsneGkkO9qcOuHv",
+                "X-Mashape-Key" => $this->config["mashape_key"],
                 "Accept" => "text/plain"
             )
         );
