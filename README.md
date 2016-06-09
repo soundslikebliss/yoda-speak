@@ -1,4 +1,7 @@
 ### consuming an external API via PHP
 
 #### to do:
-#### form, ajax req, same page response 
+### form (done) 
+### ajax req (done)
+### same page response (done)
+### spinner (done)
