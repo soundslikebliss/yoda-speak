@@ -1,7 +1,9 @@
-<?php 
+<?php
+
+require_once 'vendor/autoload.php';
 
 
-class Sentence 
+class Sentence
 {
 	private $config;
 
@@ -11,21 +13,18 @@ class Sentence
 		$this->config = $config;
 	}
 
-	public function send_request($formatted_sentence) {
+	public function send_request($arg) {
 
       	Unirest\Request::verifyPeer(false);
-      	
-        // $response = Unirest\Request::get("https://yoda.p.mashape.com/yoda?sentence=You+will+learn+how+to+speak+like+me+someday.",
-        $response = Unirest\Request::get("https://yoda.p.mashape.com/yoda?sentence=$formatted_sentence",
+
+        $response = Unirest\Request::get("https://yoda.p.mashape.com/yoda?sentence=$arg",
             array(
                 "X-Mashape-Key" => $this->config["mashape_key"],
                 "Accept" => "text/plain"
             )
         );
 
-        echo '<p>' .var_dump($response). '</p>';
-        echo '<h2>Response Body: ' .$response->body. '</h2>';
-
+        echo($response->body);
 	}
 }
 
