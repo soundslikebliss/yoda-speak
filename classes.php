@@ -1,12 +1,9 @@
 <?php
-
 require_once 'vendor/autoload.php';
-
 
 class Sentence
 {
 	private $config;
-
 
 	public function __construct() {
 		include("environment.php");
@@ -27,8 +24,4 @@ class Sentence
         echo($response->body);
 	}
 }
-
-
-
-
- ?>
+?>

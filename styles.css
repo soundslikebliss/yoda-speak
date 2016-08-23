@@ -1,0 +1,48 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    margin: 0;
+}
+h1 {
+    font-size: 4em;
+    padding-bottom: 0;
+}
+h2 {
+    padding-left: .5em;
+}
+
+.wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.form-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 2em 0;
+    height: 290px;
+}
+
+input {
+    padding: .5em;
+}
+
+pre {
+    overflow: auto;
+}
+
+.code-wrapper1, .code-wrapper3 {
+}
+
+.code-wrapper1, .code-wrapper3 {
+    color: #FFFFFF;
+    background-color: #3498db;
+}
+.code-wrapper2 {
+    color: #000000;
+}
+.code-wrapper2, .code-wrapper3 {
+    margin-bottom: 2em;
+}
